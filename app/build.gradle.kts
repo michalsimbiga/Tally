@@ -1,6 +1,15 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.msimbiga.android.application.compose)
+    alias(libs.plugins.kotlin.serialization)
+
+
+//    alias(libs.plugins.payeye.android.application.compose)
+//    alias(libs.plugins.payeye.android.room)
+//    alias(libs.plugins.mapsplatform.secrets.plugin)
+//    alias(libs.plugins.navigation.safeargs)
+//    alias(libs.plugins.firebase.crashlytics)
+//    alias(libs.plugins.google.services)
+//    alias(libs.plugins.app.distribution)
 }
 
 android {
@@ -20,23 +29,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    buildFeatures {
-        compose = true
-    }
 }
 
 dependencies {
@@ -48,6 +40,13 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    implementation(libs.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
+
+
+
+
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)

@@ -3,6 +3,6 @@ plugins {
     alias(libs.plugins.msimbiga.android.room)
 }
 
-//android {
-//    namespace = "com.msimbiga.weighttracker.storage"
-//}
+android {
+    namespace = "com.msimbiga.weighttracker.storage"
+}

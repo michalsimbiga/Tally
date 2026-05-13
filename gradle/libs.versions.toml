@@ -6,14 +6,17 @@ junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.6.1"
-androidx-navigation = "2.4.2"
+androidx-navigation = "2.9.8"
 activityCompose = "1.8.0"
 kotlin = "2.2.10"
 ksp = "2.0.0-1.0.23"
 room = "2.8.4"
 composeBom = "2026.02.01"
+composeCompiler = "1.5.9"
 appcompat = "1.7.1"
 material = "1.13.0"
+kotlinx-serialization = "1.6.3"
+
 
 
 projectApplicationName = "Weight Tracker"
@@ -40,9 +43,12 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization"}
+
 
 # AndroidX Navigation
 navigation-runtime-ktx = { module = "androidx.navigation:navigation-runtime-ktx", version.ref = "androidx-navigation" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
 navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx-navigation" }
 navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidx-navigation" }
 
@@ -72,6 +78,8 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 room = { id = "androidx.room", version.ref = "room" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
 
 # Project defined plugins
 msimbiga-android-application = { id = "com.msimbiga.weighttracker.android.application", version = "unspecified" }

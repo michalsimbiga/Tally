@@ -25,38 +25,38 @@ internal fun Project.configureFlavourTypes(
 
         flavorDimensions += listOf("environment", "provider")
 
-        productFlavors {
-            PasswalletFlavour.values().forEach {
-                create(it.name.lowercase()) {
-                    dimension = it.dimension
-//                    flavorConfigurationBlock(this, it)
-                    if (this@apply is ApplicationExtension && this is ApplicationProductFlavor) {
-                        if (it.applicationIdSuffix != null) {
-                            applicationIdSuffix = it.applicationIdSuffix
-                        }
-                        if (it.versionNameSuffix != null) {
-                            versionNameSuffix = it.versionNameSuffix
-                        }
-                    }
-                }
-            }
-        }
+//        productFlavors {
+//            PasswalletFlavour.values().forEach {
+//                create(it.name.lowercase()) {
+//                    dimension = it.dimension
+////                    flavorConfigurationBlock(this, it)
+//                    if (this@apply is ApplicationExtension && this is ApplicationProductFlavor) {
+//                        if (it.applicationIdSuffix != null) {
+//                            applicationIdSuffix = it.applicationIdSuffix
+//                        }
+//                        if (it.versionNameSuffix != null) {
+//                            versionNameSuffix = it.versionNameSuffix
+//                        }
+//                    }
+//                }
+//            }
+//        }
 
-        sourceSets {
-            named("dev") {
-                java.srcDirs("src/dev/java")
-                res.srcDirs("src/dev/res")
-            }
-            named("prod") {
-                java.srcDirs("src/prod/java")
-                res.srcDirs("src/prod/res")
-            }
-            named("google") {
-                java.srcDirs("src/google/java")
-            }
-            named("huawei") {
-                java.srcDirs("src/huawei/java")
-            }
-        }
+//        sourceSets {
+//            named("dev") {
+//                java.srcDirs("src/dev/java")
+//                res.srcDirs("src/dev/res")
+//            }
+//            named("prod") {
+//                java.srcDirs("src/prod/java")
+//                res.srcDirs("src/prod/res")
+//            }
+//            named("google") {
+//                java.srcDirs("src/google/java")
+//            }
+//            named("huawei") {
+//                java.srcDirs("src/huawei/java")
+//            }
+//        }
     }
 }
