@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.msimbiga.weighttracker.buildlogic"
+group = "com.msimbiga.tally.buildlogic"
 
 dependencies {
     compileOnly(libs.android.gradlePlugin)
@@ -16,35 +16,35 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = "com.msimbiga.weighttracker.android.application"
+            id = "tally.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidApplicationCompose") {
-            id = "com.msimbiga.weighttracker.android.application.compose"
+            id = "tally.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidLibrary") {
-            id = "com.msimbiga.weighttracker.android.library"
+            id = "tally.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "com.msimbiga.weighttracker.android.library.compose"
+            id = "tally.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidFeatureUi") {
-            id = "com.msimbiga.weighttracker.android.feature.ui"
+            id = "tally.android.feature.ui"
             implementationClass = "AndroidFeatureUiConventionPlugin"
         }
         register("androidRoom") {
-            id = "com.msimbiga.weighttracker.android.room"
+            id = "tally.android.room"
             implementationClass = "AndroidRoomConventionPlugin"
         }
         register("jvmLibrary") {
-            id = "com.msimbiga.weighttracker.jvm.library"
+            id = "tally.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
         register("androidDetekt") {
-            id = "com.msimbiga.weighttracker.android.detekt"
+            id = "tally.android.detekt"
             implementationClass = "AndroidDetektConventionPlugin"
         }
     }

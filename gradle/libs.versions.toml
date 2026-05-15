@@ -4,6 +4,7 @@ androidTools = "31.5.0"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
+desugar_jdk_libs = "2.1.5"
 espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.6.1"
 androidx-navigation = "2.9.8"
@@ -13,19 +14,20 @@ ksp = "2.0.0-1.0.23"
 room = "2.8.4"
 composeBom = "2026.02.01"
 composeCompiler = "1.5.9"
+org-jetbrains-kotlin-jvm = "2.2.10"
 appcompat = "1.7.1"
 material = "1.13.0"
 kotlinx-serialization = "1.6.3"
 
 
 
-projectApplicationName = "Weight Tracker"
+projectApplicationName = "Tally"
 projectCompileSdkVersion = "36"
 projectMinSdkVersion = "30"
 projectTargetSdkVersion = "36"
 projectVersionCode = "1"
 projectVersionName = "1.0"
-projectApplicationId = "com.msimbiga.weighttracker"
+projectApplicationId = "tally"
 
 
 [libraries]
@@ -44,6 +46,7 @@ androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization"}
+desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
 
 
 # AndroidX Navigation
@@ -59,36 +62,40 @@ room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 
-# Dependencies of the included build-logic
-android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
-android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
 compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
-kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
-ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
-room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
-
+# Gradle
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 room = { id = "androidx.room", version.ref = "room" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }
+androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp" }
+#mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin"}
+#compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
 
 
 # Project defined plugins
-msimbiga-android-application = { id = "com.msimbiga.weighttracker.android.application", version = "unspecified" }
-msimbiga-android-application-compose = { id = "com.msimbiga.weighttracker.android.application.compose", version = "unspecified" }
-msimbiga-android-library = { id = "com.msimbiga.weighttracker.android.library", version = "unspecified" }
-msimbiga-android-library-compose = { id = "com.msimbiga.weighttracker.android.library.compose", version = "unspecified" }
-msimbiga-android-feature-ui = { id = "com.msimbiga.weighttracker.android.feature.ui", version = "unspecified" }
-msimbiga-android-room = { id = "com.msimbiga.weighttracker.android.room", version = "unspecified" }
-msimbiga-jvm-library = { id = "com.msimbiga.weighttracker.jvm.library", version = "unspecified" }
+tally-android-application = { id = "tally.android.application", version = "unspecified" }
+tally-android-application-compose = { id = "tally.android.application.compose", version = "unspecified" }
+tally-android-library = { id = "tally.android.library", version = "unspecified" }
+tally-android-library-compose = { id = "tally.android.library.compose", version = "unspecified" }
+tally-android-feature-ui = { id = "tally.android.feature.ui", version = "unspecified" }
+tally-android-room = { id = "tally.android.room", version = "unspecified" }
+tally-jvm-library = { id = "tally.jvm.library", version = "unspecified" }
 #payeye-android-detekt = { id = "com.payeye.passwallet.android.detekt", version = "unspecified" }
 
 

@@ -1,7 +1,7 @@
 import com.android.build.api.dsl.LibraryExtension
-import com.msimbiga.weighttracker.ExtensionType
-import com.msimbiga.weighttracker.configureBuildTypes
-import com.msimbiga.weighttracker.configureKotlinAndroid
+import com.msimbiga.tally.ExtensionType
+import com.msimbiga.tally.configureBuildTypes
+import com.msimbiga.tally.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

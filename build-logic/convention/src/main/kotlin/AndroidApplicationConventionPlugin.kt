@@ -1,9 +1,9 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.msimbiga.weighttracker.ExtensionType
-import com.msimbiga.weighttracker.configureBuildTypes
-import com.msimbiga.weighttracker.configureFlavourTypes
-import com.msimbiga.weighttracker.configureKotlinAndroid
-import com.msimbiga.weighttracker.libs
+import com.msimbiga.tally.ExtensionType
+import com.msimbiga.tally.configureBuildTypes
+import com.msimbiga.tally.configureFlavourTypes
+import com.msimbiga.tally.configureKotlinAndroid
+import com.msimbiga.tally.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -15,7 +15,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             pluginManager.run {
                 apply("com.android.application")
 //                apply("org.jetbrains.kotlin.android")
-//                apply("com.msimbiga.weighttracker.android.detekt")
             }
             extensions.configure<ApplicationExtension> {
                 defaultConfig {
@@ -33,7 +32,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                     extensionType = ExtensionType.APPLICATION
                 )
 
-                configureFlavourTypes(this)
+//                configureFlavourTypes(this)
             }
         }
     }

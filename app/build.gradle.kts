@@ -1,7 +1,6 @@
 plugins {
-    alias(libs.plugins.msimbiga.android.application.compose)
+    alias(libs.plugins.tally.android.application.compose)
     alias(libs.plugins.kotlin.serialization)
-
 
 //    alias(libs.plugins.payeye.android.application.compose)
 //    alias(libs.plugins.payeye.android.room)
@@ -13,26 +12,23 @@ plugins {
 }
 
 android {
-    namespace = "com.msimbiga.weighttracker"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
+    namespace = "com.msimbiga.tally"
+
+    defaultConfig {
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
         }
     }
 
-    defaultConfig {
-        applicationId = "com.msimbiga.weighttracker"
-        minSdk = 30
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
 }
 
 dependencies {
-    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.ui)
@@ -43,8 +39,6 @@ dependencies {
 
     implementation(libs.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
-
-
 
 
     testImplementation(libs.junit)

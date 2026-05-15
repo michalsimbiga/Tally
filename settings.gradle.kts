@@ -25,7 +25,13 @@ dependencyResolutionManagement {
 //}
 
 
-rootProject.name = "WeightTracker"
+rootProject.name = "Tally"
+
 include(":app")
-include(":storage")
-include(":core")
+//include(":storage")
+//include(":feature:dashboard")
+//include(":feature:weight")
+//include(":feature:todo")
+//include(":feature:stats")
+//include(":feature:settings")
+//include(":domain")

@@ -1,9 +1,8 @@
-import com.msimbiga.weighttracker.libs
+import com.msimbiga.tally.libs
 //import io.gitlab.arturbosch.detekt.Detekt
 //import io.gitlab.arturbosch.detekt.extensions.DetektExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.dependencies
 
 class AndroidDetektConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
